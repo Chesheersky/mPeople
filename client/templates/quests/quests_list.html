@@ -1,0 +1,17 @@
+<template name="questsList">
+  <div class="quests page">
+    <div class="wrapper">
+      {{#each quests}}
+        {{> questItem}}
+      {{/each}}
+    </div>
+    
+    {{#if nextPath}}
+      <a class="load-more" href="{{nextPath}}">Загрузить ещё</a>
+    {{else}}
+      {{#unless ready}}
+        {{> spinner}}
+      {{/unless}}
+    {{/if}}
+  </div>
+</template>

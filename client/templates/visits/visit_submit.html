@@ -1,0 +1,33 @@
+<template name="visitSubmit">
+  <form name="visit" class="visit-form form">
+      <div class="form-group {{errorClass 'phone'}}">
+          <label class="control-label" for="phone">Телефон</label>
+          <div class="controls">
+              <input name="phone" id="phone" type="text" value="" placeholder="Телефон" class="form-control"/>
+              <span class="help-block">{{errorMessage 'phone'}}</span>
+          </div>
+      </div>
+      <div class="form-group {{errorClass 'name'}}">
+          <label class="control-label" for="name">Имя</label>
+          <div class="controls">
+              <input name="name" id="name" type="text" value="" placeholder="Имя" class="form-control"/>
+              <span class="help-block">{{errorMessage 'name'}}</span>
+          </div>
+      </div>
+      <div class="form-group {{errorClass 'coupon'}}">
+          <label class="control-label" for="coupon">Купон</label>
+          <div class="controls">
+              <input name="coupon" id="coupon" type="text" value="" placeholder="Купон" class="form-control"/>
+              <span class="help-block">{{errorMessage 'coupon'}}</span>
+          </div>
+      </div>
+      <div class="form-group {{errorClass 'comment'}}">
+          <label class="control-label" for="comment">Комментарий</label>
+          <div class="controls">
+              <textarea name="comment" id="comment" class="form-control" placeholder="Комментарий" rows="3"></textarea>
+              <span class="help-block">{{errorMessage 'comment'}}</span>
+          </div>
+      </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+  </form>
+</template>
