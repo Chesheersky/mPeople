@@ -1,4 +1,4 @@
-// Fixture data 
+// Fixture data
 if (Quests.find().count() === 0) {
   var now = new Date().getTime();
   
@@ -19,6 +19,7 @@ if (Quests.find().count() === 0) {
     description: 'http://sachagreif.com/introducing-telescope/',
     submitted: new Date(now - 7 * 3600 * 1000),
     visitsCount: 2,
+    commentsCount: 0,
   });
   
   Visits.insert({
@@ -49,7 +50,8 @@ if (Quests.find().count() === 0) {
     author: maria.profile.name,
     description: 'http://meteor.com',
     submitted: new Date(now - 10 * 3600 * 1000),
-    visitsCount: 0
+    visitsCount: 0,
+    commentsCount: 0,
   });
   
   Quests.insert({
@@ -58,7 +60,8 @@ if (Quests.find().count() === 0) {
     author: antonina.profile.name,
     description: 'http://themeteorbook.com',
     submitted: new Date(now - 12 * 3600 * 1000),
-    visitsCount: 0
+    visitsCount: 0,
+    commentsCount: 0,
   });
   
   for (var i = 0; i < 10; i++) {
@@ -68,7 +71,8 @@ if (Quests.find().count() === 0) {
       userId: maria._id,
       description: 'http://google.com/?q=test-' + i,
       submitted: new Date(now - i * 3600 * 1000 + 1),
-      visitsCount: 0
+      visitsCount: 0,
+      commentsCount: 0,
     });
   }
 }

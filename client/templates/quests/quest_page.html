@@ -1,17 +1,29 @@
 <template name="questPage">
-  <div class="quest-page page">
-    {{> questItem}}
-  
-    <ul class="visits">
-      {{#each visits}}
-        {{> visitItem}}
-      {{/each}}
-    </ul>
-  
-    {{#if currentUser}}
-      {{> visitSubmit}}
-    {{else}}
-      <p>Только авторизованые пользователи могут добавлять посетителей.</p>
-    {{/if}}
-  </div>
+    <div class="quest-page page">
+        {{> questItem}}
+
+        <ul class="comments">
+            {{#each comments}}
+                {{> commentItem}}
+            {{/each}}
+        </ul>
+
+        {{#if currentUser}}
+            {{> commentSubmit}}
+        {{else}}
+            <p>Только авторизованые пользователи могут добавлять посетителей.</p>
+        {{/if}}
+
+        <ul class="visits">
+            {{#each visits}}
+                {{> visitItem}}
+            {{/each}}
+        </ul>
+
+        {{#if currentUser}}
+            {{> visitSubmit}}
+        {{else}}
+            <p>Только авторизованые пользователи могут добавлять посетителей.</p>
+        {{/if}}
+    </div>
 </template>
