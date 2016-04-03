@@ -47,6 +47,8 @@ body {
 }
 
 .quest {
+    color: #666666;
+    display:block;
     /* For modern browsers */
     /* For IE 6/7 (trigger hasLayout) */
     *zoom: 1;
@@ -111,12 +113,6 @@ body {
     margin: 0;
 }
 
-.quest .visit {
-    display: block;
-    float: right;
-    margin-top: 7px;
-}
-
 .visits {
     list-style-type: none;
     margin: 0;
@@ -138,12 +134,6 @@ body {
 
 .visits li p:last-child {
     margin-bottom: 0;
-}
-
-.quest .comment {
-    display: block;
-    float: right;
-    margin-top: 7px;
 }
 
 .comments {

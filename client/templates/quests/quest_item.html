@@ -1,17 +1,19 @@
 <template name="questItem">
-    <div class="quest">
-        <div class="quest-content">
-            <h3>{{title}} {{#if ownQuest}}<a href="{{pathFor 'questEdit'}}" class="glyphicon glyphicon-edit"></a>{{/if}}
-            </h3>
-            <p>
-                submitted by {{author}},
-                <a href="{{pathFor 'questPage'}}">{{pluralize visitsCount "посещение" "посещений"}}</a>
-                {{pluralize sCount "комментарий" "комментариев"}}
-            </p>
-            <p>
-                {{description}}
-            </p>
-        </div>
-        <a href="{{pathFor 'questPage'}}" class="visit btn btn-default">Посетители</a>
-    </div>
+    <a href="{{pathFor 'questPage'}}" class="visit">
+        <span class="quest">
+            <div class="quest-content">
+                <h3>{{title}} {{#if ownQuest}}<a href="{{pathFor 'questEdit'}}"
+                                                 class="glyphicon glyphicon-edit"></a>{{/if}}
+                </h3>
+                <p>
+                    submitted by {{author}},
+                    {{pluralize visitsCount "посещение" "посещений"}}
+                    {{pluralize commentsCount "комментарий" "комментариев"}}
+                </p>
+                <p>
+                    {{description}}
+                </p>
+            </div>
+        </span>
+    </a>
 </template>
